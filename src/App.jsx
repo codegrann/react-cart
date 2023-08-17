@@ -3,13 +3,14 @@ import "./App.css";
 import Footer from "./Footer";
 import Header from "./Header";
 import { getProducts } from "./services/productService";
+import Spinner from "./Spinner";
 
 export default function App() {
   const [size, setSize] = useState("");
   const [products, setProducts] = useState([]);
   useEffect(() => {
     getProducts("shoes").then((response) => setProducts(response));
-  });
+  }, []);
 
   function renderProduct(p) {
     return (

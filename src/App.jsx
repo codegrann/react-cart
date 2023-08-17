@@ -78,6 +78,7 @@ export default function App() {
               <option value="8">8</option>
               <option value="9">9</option>
             </select>
+            {size && <h1>Found {filteredProducts.length} items</h1>}
           </section>
           <section id="products">{filteredProducts.map(renderProduct)}</section>
         </main>

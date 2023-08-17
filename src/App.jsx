@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -44,6 +44,7 @@ const products=[
   ]
 
 export default function App() {
+  const [size, setSize]=useState("");
   function renderProduct(p) {
     return (
       <div key={p.id} className="product">
